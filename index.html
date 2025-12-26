@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>MP-Tech - Your online vision. Made real</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mp-tech.css">
+    <link href="assets/favicon.png" rel="icon">
+    <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!--
+
+MP-Tech - Your online vision. Made real
+
+-->
+
+</head>
+<body>
+  <!--D. R.-C.-->
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <script>
+      /*function check(e)
+      {
+      alert(e.keyCode);
+      }*/
+      document.onkeydown = function(e) {
+          if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+            alert('not allowed');
+          }
+          return false;
+      };
+      </script>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-ring"></div>
+        <div class="loading-text">Initializing Experience...</div>
+    </div>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header" id="mainHeader">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00f0ff"/>
+                            <stop offset="100%" style="stop-color:#ff00d4"/>
+                        </linearGradient>
+                    </defs>
+                    <polyline points="5.0,50.0 5.9,55.7 6.8,61.3 7.7,66.7 8.6,71.9 9.5,76.7 10.5,81.1 11.4,84.9 12.3,88.2 13.2,90.9 14.1,93.0 15.0,94.3 15.9,94.9 16.8,94.9 17.7,94.0 18.6,92.5 19.5,90.3 20.5,87.5 21.4,84.0 22.3,80.0 23.2,75.5 24.1,70.6 25.0,65.4 25.9,59.9 26.8,54.3 27.7,48.6 28.6,42.9 29.5,37.3 30.5,32.0 31.4,26.9 32.3,22.2 33.2,17.9 34.1,14.2 35.0,11.0 35.9,8.5 36.8,6.6 37.7,5.5 38.6,5.0 39.5,5.3 40.5,6.3 41.4,8.0 42.3,10.3 43.2,13.3 44.1,16.9 45.0,21.1 45.9,25.7 46.8,30.7 47.7,36.0 48.6,41.5 49.5,47.1 50.5,52.9 51.4,58.5 52.3,64.0 53.2,69.3 54.1,74.3 55.0,78.9 55.9,83.1 56.8,86.7 57.7,89.7 58.6,92.0 59.5,93.7 60.5,94.7 61.4,95.0 62.3,94.5 63.2,93.4 64.1,91.5 65.0,89.0 65.9,85.8 66.8,82.1 67.7,77.8 68.6,73.1 69.5,68.0 70.5,62.7 71.4,57.1 72.3,51.4 73.2,45.7 74.1,40.1 75.0,34.6 75.9,29.4 76.8,24.5 77.7,20.0 78.6,16.0 79.5,12.5 80.5,9.7 81.4,7.5 82.3,6.0 83.2,5.1 84.1,5.1 85.0,5.7 85.9,7.0 86.8,9.1 87.7,11.8 88.6,15.1 89.5,18.9 90.5,23.3 91.4,28.1 92.3,33.3 93.2,38.7 94.1,44.3 95.0,50.0"
+    fill="none"
+    stroke="url(#logoGradient)"
+    stroke-width="2"/>
+
+                    <circle cx="50" cy="50" r="12" fill="url(#logoGradient)" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="6" fill="url(#logoGradient)"/>
+                </svg>
+            </div>
+            <h1 class="brand-name">MP-Tech</h1>
+            <p class="tagline">Your online vision. Made real</p>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid" id="menuGrid">
+            <div class="menu-item initial-load" data-section="introduction">
+                <div class="menu-badge">IN</div>
+                <div class="menu-title">Introduction</div>
+            </div>
+            <div class="menu-item initial-load" data-section="services">
+                <div class="menu-badge">SV</div>
+                <div class="menu-title">Services</div>
+            </div>
+            <div class="menu-item initial-load" data-section="gallery">
+                <div class="menu-badge">GL</div>
+                <div class="menu-title">Gallery</div>
+            </div>
+            <div class="menu-item initial-load" data-section="testimonials">
+                <div class="menu-badge">TM</div>
+                <div class="menu-title">Testimonials</div>
+            </div>
+            <div class="menu-item initial-load" data-section="about">
+                <div class="menu-badge">AB</div>
+                <div class="menu-title">About</div>
+            </div>
+            <div class="menu-item initial-load" data-section="contact">
+                <div class="menu-badge">CT</div>
+                <div class="menu-title">Contact</div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div id="contentArea">
+            <!-- Introduction Section -->
+            <div class="content-section" id="introduction">
+                <div class="section-header-small">
+                    <div class="small-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="smallLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:#ff00d4"/>
+                                </linearGradient>
+                            </defs>
+                            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M 10 50 c 15 -30, 35 -30, 50 0 s 35 30, 50 0 s 35 -30, 50 0"
+    fill="none"
+    stroke="blue"
+    stroke-width="3"
+  />
+</svg>
+                            <circle cx="50" cy="50" r="10" fill="url(#smallLogoGrad)"/>
+                        </svg>
+                    </div>
+                    <div class="small-brand">
+                        <h3>MP-Tech</h3>
+                        <p>Your online vision. Made real</p>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+
+                <!-- Hero Banner -->
+                <div class="intro-hero">
+                    <div class="intro-hero-content">
+                        <span class="intro-badge">Est. 2016</span>
+                        <h1 class="intro-headline">You provide the idea, <span>we provide the code.</span></h1>
+                        <p class="intro-subtext">Web design that turns visitors into customers.</p>
+                        <div class="intro-cta-group">
+
+                          <a href="https://www.akqa.com/work/ibm/q-system-one/"target="_blank">
+                          <button class="intro-cta-primary">IBM Q System One</button>
+                          </a>
+
+                          <a href="https://www.ibm.com/think/topics/web-hosting"target="_blank">
+                          <button class="intro-cta-primary">What is web hosting?</button>
+                          </a>
+
+                        </div>
+                    </div>
+                    <div class="intro-hero-visual">
+                        <div class="intro-floating-card card-1">
+                            <span class="card-icon">🌍</span>
+                            <span class="card-text">Always online</span>
+                        </div>
+                        <div class="intro-floating-card card-2">
+                            <span class="card-icon">🔧</span>
+                            <span class="card-text">Configurable</span>
+                        </div>
+                        <div class="intro-floating-card card-3">
+                            <span class="card-icon">🔒</span>
+                            <span class="card-text">Secure & Reliable</span>
+                        </div>
+                        <div class="intro-orb"></div>
+                    </div>
+                </div>
+
+                <!-- Metrics Strip -->
+                <div class="intro-metrics">
+                    <div class="metric-item">
+                        <span class="metric-value" data-target="580">0</span>
+                        <span class="metric-label">Projects Delivered</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-value" data-target="100">0</span>
+                        <span class="metric-suffix">%</span>
+                        <span class="metric-label">Client Retention</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-value" data-target="9">0</span>
+                        <span class="metric-label">Sectors</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                      <span class="metric-value" data-target="100">0</span>
+                      <span class="metric-suffix">%</span>
+                      <span class="metric-label">Personal Support</span>
+                    </div>
+                </div>
+
+                <!-- Core Values -->
+                <div class="intro-values">
+                    <div class="value-card">
+                        <div class="value-number">01</div>
+                        <h3>Brainstorming</h3>
+                        <p>You provide the information and photos you want to add, so that we can begin creating your website.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-number">02</div>
+                        <h3>Secure Structure</h3>
+                        <p>Once you approve the desired design, we will carefully begin creating the structure of your website.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-number">03</div>
+                        <h3>Up and Running</h3>
+                        <p>Your new website will be online with your URL ready for you to share wherever you want.</p>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Preview -->
+                <div class="intro-tech">
+                    <p class="tech-label">Sectors that used our services</p>
+                    <div class="tech-marquee">
+                        <div class="tech-track">
+                            <span class="tech-item">Construction</span>
+                            <span class="tech-item">Car Shows</span>
+                            <span class="tech-item">Marketing</span>
+                            <span class="tech-item">Manufacturing</span>
+                            <span class="tech-item">Landscaping</span>
+                            <span class="tech-item">Shooting Clubs</span>
+                            <span class="tech-item">Welding workshops</span>
+                            <span class="tech-item">Restaurants</span>
+                            <span class="tech-item">Mechanical workshops</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div class="content-section" id="services">
+                <div class="section-header-small">
+                    <div class="small-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="smallLogoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:#ff00d4"/>
+                                </linearGradient>
+                            </defs>
+                            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M 10 50 c 15 -30, 35 -30, 50 0 s 35 30, 50 0 s 35 -30, 50 0"
+    fill="none"
+    stroke="blue"
+    stroke-width="3"
+  />
+</svg>
+                            <circle cx="50" cy="50" r="10" fill="url(#smallLogoGrad2)"/>
+                        </svg>
+                    </div>
+                    <div class="small-brand">
+                        <h3>MP-Tech</h3>
+                        <p>Your online vision. Made real</p>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">Solutions at the speed of life</p>
+                </div>
+
+                <div class="tabs-container">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="switchTab(this, 'development')">Animation</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'design')">Design</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'consulting')">Consulting</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'support')">Support</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="development">
+                            <div class="services-list">
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/ai-optimized-templates.jpg" alt="AI Development">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Technology</h4>
+                                        <p>Different designs for each need, showcasing each person's area of ​​expertise.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/buterfly.jpg" alt="buterfly">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Motion Design</h4>
+                                        <p>Engaging animations visual experiences that bring your digital products to life.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/ai-mobile-app.jpg" alt="Mobile Apps">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Personality</h4>
+                                        <p>Custom-designed and eye-catching, showcasing your area of ​​interest in every click.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="design">
+                            <div class="services-list">
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/design-screen.jpg" alt="UX/UI Design">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Code Your Own Reality</h4>
+                                        <p>Beautiful, intuitive interfaces that delight users and drive engagement through research-backed design principles.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/coding-screen.jpg" alt="resume">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>e-Resume</h4>
+                                        <p>Your work experience and skills showcased in one click, offering a professional approach before the job interview.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/branding.jpg" alt="Branding">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Web hosting made easy</h4>
+                                        <p>Web hosting upon completion of your project. We Handle the Tech. You Build the Business.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="consulting">
+                            <div class="services-list">
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/digital-strategy.jpg" alt="Digital Strategy">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Digital Strategy</h4>
+                                        <p>Strategic planning for digital transformation initiatives that align technology with business objectives.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/tech-audit.jpg" alt="Technology Audit">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Technology Audit</h4>
+                                        <p>Comprehensive assessment of your tech infrastructure to identify opportunities and optimize performance.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/process-optimized.jpg" alt="Process Optimization">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Process Optimization</h4>
+                                        <p>Streamline workflows with automation and best practices for maximum efficiency and productivity.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="support">
+                            <div class="services-list">
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/247-support.jpg" alt="24/7 Support">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Support</h4>
+                                        <p>Bridging the gap between you and your tech.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/training-center.jpg" alt="Training">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Maintenance</h4>
+                                        <p>Automated periodic testing for continuous operation of your website.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/p.jpg" alt="progaming">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Backup</h4>
+                                        <p>Safeguarding the encoding and the entire structure of your website.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="content-section" id="gallery">
+                <div class="section-header-small">
+                    <div class="small-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="smallLogoGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:#ff00d4"/>
+                                </linearGradient>
+                            </defs>
+                            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M 10 50 c 15 -30, 35 -30, 50 0 s 35 30, 50 0 s 35 -30, 50 0"
+    fill="none"
+    stroke="blue"
+    stroke-width="3"
+  />
+</svg>
+                            <circle cx="50" cy="50" r="10" fill="url(#smallLogoGrad3)"/>
+                        </svg>
+                    </div>
+                    <div class="small-brand">
+                        <h3>MP-Tech</h3>
+                        <p>Your online vision. Made real</p>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+
+                <div class="section-header">
+                    <h2 class="section-title">Our Portfolio</h2>
+                    <p class="section-subtitle">Where Imagination Takes Shape</p>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+                    <button class="filter-btn" onclick="filterGallery('web', this)">Personal</button>
+                    <button class="filter-btn" onclick="filterGallery('mobile', this)">Office</button>
+                    <button class="filter-btn" onclick="filterGallery('branding', this)">Service</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="web">
+                        <img src="images/type-r.jpg" alt="type-r">
+                        <div class="gallery-overlay">
+                            <h4>Platform for Car Clubs</h4>
+                            <p>Autoshow and Speed</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="mobile">
+                        <img src="images/sr.jpg" alt="office">
+                        <div class="gallery-overlay">
+                            <h4>Profesional Presentation</h4>
+                            <p>Atractive Look</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="branding">
+                        <img src="images/const.jpg" alt="construction">
+                        <div class="gallery-overlay">
+                            <h4>Your Business Visualized</h4>
+                            <p>Organized Information</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="web">
+                        <img src="images/tax.jpg" alt="guns">
+                        <div class="gallery-overlay">
+                            <h4>Firearms Enthusiasts</h4>
+                            <p>Shooting Sport</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="mobile">
+                        <img src="images/bo.jpg" alt="books">
+                        <div class="gallery-overlay">
+                            <h4>Photos that Come to Life</h4>
+                            <p>Visually Refresh</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="branding">
+                        <img src="images/fd.jpg" alt="food">
+                        <div class="gallery-overlay">
+                            <h4>Fine and Modern Designs</h4>
+                            <p>Personalized</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="content-section" id="testimonials">
+                <div class="section-header-small">
+                    <div class="small-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="smallLogoGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:#ff00d4"/>
+                                </linearGradient>
+                            </defs>
+                            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M 10 50 c 15 -30, 35 -30, 50 0 s 35 30, 50 0 s 35 -30, 50 0"
+    fill="none"
+    stroke="blue"
+    stroke-width="3"
+  />
+</svg>
+                            <circle cx="50" cy="50" r="10" fill="url(#smallLogoGrad4)"/>
+                        </svg>
+                    </div>
+                    <div class="small-brand">
+                        <h3>MP-Tech</h3>
+                        <p>Your online vision. Made real</p>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+
+                <div class="section-header">
+                    <h2 class="section-title">CEO Message and Client Stories</h2>
+                    <p class="section-subtitle">What our clients say about us</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">In today's digital age, your online presence is your most valuable asset, and our goal is to ensure that this asset is powerful, efficient, and ready to scale.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="images/testimonial/mp.jpg" alt="MPerez">
+                            </div>
+                            <div class="author-info">
+                                <h5>Miguel E. Pérez</h5>
+                                <p>CEO, MP-Tech</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">The MP-Tech team helped me develop my landing page where I can showcase my online bookstore and so my customers can view my book inventory.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="images/testimonial/ria.jpg" alt="Client 2">
+                            </div>
+                            <div class="author-info">
+                                <h5>Maria Isabel Torrez</h5>
+                                <p>Owner, Rheia Books</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">From strategy to execution, MP-Tech delivered exceptional results. Their commitment to quality is unmatched in the industry.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="images/testimonial/serr.jpg" alt="Client 3">
+                            </div>
+                            <div class="author-info">
+                                <h5>David Serrano</h5>
+                                <p>Founder, Serrano Construction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Professional service and instant development, as well as security and protection of my project.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="images/testimonial/coci.jpg" alt="Client 4">
+                            </div>
+                            <div class="author-info">
+                                <h5>Dinora Fernandez</h5>
+                                <p>Owner, Cocina Criolla</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="content-section" id="about">
+                <div class="section-header-small">
+                    <div class="small-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="smallLogoGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:#ff00d4"/>
+                                </linearGradient>
+                            </defs>
+                            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M 10 50 c 15 -30, 35 -30, 50 0 s 35 30, 50 0 s 35 -30, 50 0"
+      fill="none"
+      stroke="blue"
+      stroke-width="3"
+    />
+  </svg>
+                            <circle cx="50" cy="50" r="10" fill="url(#smallLogoGrad5)"/>
+                        </svg>
+                    </div>
+                    <div class="small-brand">
+                        <h3>MP-Tech</h3>
+                        <p>Your online vision. Made real</p>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+
+                <div class="section-header">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="section-subtitle">Where art meets algorithm</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Web design that tells your story</h3>
+                        <p>We believe first impressions matter. In a world saturated with generic templates, at MP-Tech we stand for authenticity.</p>
+                        <p>Our process always begins with a blank page and actively listening to your needs. We don't mass-produce websites; we create bespoke digital experiences.</p>
+                        <p>Your website will be online as soon as we finish the work, so you don't have to worry about finding a web hosting site.</p>
+                        <p>We don't sacrifice quality; we simply work smarter.</p>
+                        <p>You can read the <a href="assets/Terms and Conditions.pdf" rel="nofollow" target="_blank">Terms and Conditions</a> to familiarize yourself with our philosophy, and then we can begin creating your project.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/about-our-team.jpg" alt="Our Team">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="content-section" id="contact">
+                <div class="section-header-small">
+                    <div class="small-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="smallLogoGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00f0ff"/>
+                                    <stop offset="100%" style="stop-color:#ff00d4"/>
+                                </linearGradient>
+                            </defs>
+                            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M 10 50 c 15 -30, 35 -30, 50 0 s 35 30, 50 0 s 35 -30, 50 0"
+    fill="none"
+    stroke="blue"
+    stroke-width="3"
+  />
+</svg>
+                            <circle cx="50" cy="50" r="10" fill="url(#smallLogoGrad6)"/>
+                        </svg>
+                    </div>
+                    <div class="small-brand">
+                        <h3>MP-Tech</h3>
+                        <p>Your online vision. Made real</p>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
+
+                <div class="section-header">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle">Let's create something amazing together</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300.2266080005793!2d-66.10652237916547!3d18.41472808049737!2m3!1f0!2f39.405090773048826!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x8c0369106e329dd7%3A0xdf8c10b233a7f26!2sMetro%20Office%20Park%2C%208%20C.%201%20Suite%20206%2C%20San%20Juan%2C%20Guaynabo%2000968!5e1!3m2!1ses-419!2spr!4v1766364010224!5m2!1ses-419!2spr" width="500" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Metro Office Park, 8 C. 1, <br>
+                                  San Juan, Guaynabo PR. 00968
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="mailto:perezmv2021@outlook.com">MP-Tech</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>(939) 220-1491</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="mainFooter">
+
+            <p><html>
+              <head>
+                <title></title>
+              </head>
+              <body>
+
+
+                <h2 id="displayDateTime"></h2>
+              </body>
+                <script type="text/javascript">
+                var today = new Date();
+                var day = today.getDay();
+                var daylist = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                var date = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear()+'.';
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                var dateTime = date;
+                document.getElementById("displayDateTime").innerHTML = dateTime + ' ' + daylist[day];
+                </script>
+              </html></p><br>
+
+              <p>© 2026 MP-Tech | Your online vision. Made real | Design by: <a href="#"target="">MP-Tech</a> | (939) 220-1491</p>
+        </footer>
+    </div>
+<script src="mp-tech-scripts.js"></script>
+</body>
+</html>
