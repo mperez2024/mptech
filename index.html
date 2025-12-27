@@ -735,9 +735,15 @@ MP-Tech - Your online vision. Made real
                 </script>
               </html></p><br>
 
-              <p>© 2026 MP-Tech | Your online vision. Made real | Design by: <a href="#"target="">MP-Tech</a> | (939) 220-1491</p>
+              <p>Copyright © <span id="year"></span> MP-Tech | Your online vision. Made real | Design by: <a href="#"target="">MP-Tech</a> | (939) 220-1491</p></p>
+
+              <script>
+              document.getElementById("year").textContent = new Date().getFullYear();
+              </script>
+            
         </footer>
     </div>
 <script src="mp-tech-scripts.js"></script>
 </body>
 </html>
+
