@@ -22,22 +22,11 @@ MP-Tech - Your online vision. Made real
 
 </head>
 <body>
-  <!--D. R.-C.-->
+  
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
-    <script>
-      /*function check(e)
-      {
-      alert(e.keyCode);
-      }*/
-      document.onkeydown = function(e) {
-          if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
-            alert('not allowed');
-          }
-          return false;
-      };
-      </script>
+    
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loader-ring"></div>
@@ -746,6 +735,7 @@ MP-Tech - Your online vision. Made real
 <script src="mp-tech-scripts.js"></script>
 </body>
 </html>
+
 
 
 
