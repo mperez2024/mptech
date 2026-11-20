@@ -3,27 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-
-    <title>MP-Tech - Web Design &amp; Hosting in San Juan, PR | Your Online Vision. Made Real</title>
-    <meta name="description" content="MP-Tech (Est. 2016) offers custom web design, motion design, consulting, maintenance, and web hosting in Guaynabo &amp; San Juan, Puerto Rico. 380+ projects delivered.">
-    <meta name="keywords" content="MP-Tech, web design Puerto Rico, web hosting, motion design, digital strategy, San Juan web developer, Guaynabo web design">
-
-    
-    <link rel="canonical" href="https://mperez2024.github.io/mptech/">
-
-    
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="MP-Tech - Your Online Vision. Made Real">
-    <meta property="og:description" content="Bespoke web design, motion visuals, consulting, and included web hosting. Over 380 projects delivered across 9 sectors.">
-    <meta property="og:image" content="images/logo.png">
-
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MP-Tech - Your Online Vision. Made Real">
-    <meta name="twitter:description" content="Web design that turns visitors into customers, with web hosting included.">
-    <meta name="twitter:image" content="images/logo.png">
-
+    <title>MP-Tech - Your online vision. Made real</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,37 +11,24 @@
     <link href="assets/favicon.png" rel="icon">
     <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
 
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "MP-Tech",
-      "description": "Web design, motion design, consulting, maintenance, and web hosting services.",
-      "foundingDate": "2016",
-      "founder": {
-        "@type": "Person",
-        "name": "Miguel E. Pérez Velázquez"
-      },
-      "telephone": "+1-939-220-1491",
-      "email": "mepv2015@outlook.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Metro Office Park, 8 C. 1",
-        "addressLocality": "Guaynabo",
-        "addressRegion": "PR",
-        "postalCode": "00968",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "San Juan" },
-        { "@type": "City", "name": "Guaynabo" },
-        { "@type": "AdministrativeArea", "name": "Puerto Rico" }
-      ]
-    }
-    </script>
+<!--MP-Tech - Your online vision. Made real-->
 </head>
 <body>
+    <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <script>
+      /*function check(e)
+      {
+      alert(e.keyCode);
+      }*/
+      document.onkeydown = function(e) {
+          if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+            alert('not allowed');
+          }
+          return false;
+      };
+      </script>
     <div class="loading-screen" id="loadingScreen">
         <div class="loader-ring"></div>
         <div class="loading-text">Initializing Experience...</div>
