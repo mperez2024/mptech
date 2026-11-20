@@ -14,21 +14,6 @@
 <!--MP-Tech - Your online vision. Made real-->
 </head>
 <body>
-    <script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
-    <script>
-      /*function check(e)
-      {
-      alert(e.keyCode);
-      }*/
-      document.onkeydown = function(e) {
-          if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
-            alert('not allowed');
-          }
-          return false;
-      };
-      </script>
     <div class="loading-screen" id="loadingScreen">
         <div class="loader-ring"></div>
         <div class="loading-text">Initializing Experience...</div>
